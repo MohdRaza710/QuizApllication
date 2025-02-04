@@ -19,7 +19,7 @@ const App = () => {
       <h1 className="text-3xl font-bold mb-6">Quiz Application</h1>
       {!quizStarted && !showResult && <Start onStart={startQuiz} />}
       {quizStarted && !showResult && <Quiz setScore={setScore} setShowResult={setShowResult} />}
-      {showResult && <Result score={score} />}
+      {showResult && <Result score={score} restartQuiz={startQuiz} />}
     </div>
   );
 };

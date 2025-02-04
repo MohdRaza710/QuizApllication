@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Start from "../src/components/Start";
+
 
 const questions = [
     {
@@ -9,7 +9,7 @@ const questions = [
             "Framework",
             "Programming language",
             "All above"],
-        answer: "an open source library"
+        answer: "An open source library"
     },
     {
         question: "Who is known as the father of computers?",
@@ -114,10 +114,6 @@ const Quiz = ({ onStart, setScore, setShowResult }) => {
                         {option}
                     </button>
                 ))}
-            </div>
-            <div>
-                <h1 className="text-center mt-10 text-2xl">Welcome to the Quiz</h1>
-                <button className="text-center " onClick={onStart}>Start Quiz</button>
             </div>
         </div>
     );
