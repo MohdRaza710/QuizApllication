@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import * as React from 'react';
+import { useState } from "react";
 import Start from "../src/components/Start";
 import Quiz from "../src/components/Quiz";
 import Result from "../src/components/Result";
+
 
 const App = () => {
   const [quizStarted, setQuizStarted] = useState(false);

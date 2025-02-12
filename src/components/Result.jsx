@@ -1,4 +1,6 @@
-import React from "react";
+import * as React from 'react';
+import Button from '@mui/material/Button';
+
 
 const Result = ({ score, restartQuiz }) => {
   return (
@@ -7,12 +9,13 @@ const Result = ({ score, restartQuiz }) => {
       <h2 className="text-lg">
         Your Score: <span className="text-yellow-400 font-semibold">{score}</span>
       </h2>
-      <button
+      <Button
         onClick={restartQuiz}
-        className="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition"
+        variant="contained"
+        // className="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition"
       >
         Start Again
-      </button>
+      </Button>
     </div>
   );
 };

@@ -1,4 +1,12 @@
-import React, { useState } from "react";
+import * as React from 'react';
+import { useState } from "react";
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
 
 
 const questions = [
@@ -50,7 +58,7 @@ const questions = [
     {
         question: "What is the correct way to declare a JavaScript variable?",
         options: [
-            'ariable name = John;',
+            'variable name = John;',
             'var name = "John";',
             'v name = "John";',
             'string name = "John";'],
@@ -93,6 +101,8 @@ const Quiz = ({ onStart, setScore, setShowResult }) => {
     };
 
 
+
+
     return (
         <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center w-full max-w-md">
             <h2 className="text-xl font-semibold mb-4">{questions[currentQuestion].question}</h2>
@@ -101,12 +111,12 @@ const Quiz = ({ onStart, setScore, setShowResult }) => {
                     <button
                         key={option}
                         className={`px-4 py-2 font-semibold rounded-md transition ${selectedOption
-                                ? option === questions[currentQuestion].answer
-                                    ? "bg-green-500 text-white"
-                                    : option === selectedOption
-                                        ? "bg-red-500 text-white"
-                                        : "bg-blue-500 hover:bg-blue-600 text-white"
-                                : "bg-blue-500 hover:bg-blue-600 text-white"
+                            ? option === questions[currentQuestion].answer
+                                ? "bg-green-500 text-white"
+                                : option === selectedOption
+                                    ? "bg-red-500 text-white"
+                                    : "bg-blue-500 hover:bg-blue-600 text-white"
+                            : "bg-blue-500 hover:bg-blue-600 text-white"
                             }`}
                         onClick={() => handleAnswer(option)}
                         disabled={selectedOption !== null} // Disable buttons after selecting
@@ -116,6 +126,7 @@ const Quiz = ({ onStart, setScore, setShowResult }) => {
                 ))}
             </div>
         </div>
+
     );
 };
 
